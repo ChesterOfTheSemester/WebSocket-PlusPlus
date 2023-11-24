@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebSocket++ Simple Chatbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        #chatLog {
+            width: 100%;
+            height: 200px;
+        }
+
+        #participants {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<h1>Simple Chatbox</h1>
+
+<ul id="participants"></ul>
+
+<div>
+    <textarea id="chatLog" readonly></textarea>
+</div>
+
+<div>
+    <input type="text" id="messageInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+
+<script>
+    window.onload = function ()
+    {
+        function connectWebSocket()
+        {
+            const socket = window.socket = new WebSocket('ws://localhost:4732');
+
+            socket.addEventListener('open', (event) => {
+                chatLog.value = '';
+            });
+
+            socket.addEventListener('message', (event) => {
+                chatLog.value = event.data;
+                chatLog.scrollTop = chatLog.scrollHeight;
+
+            });
+
+            socket.addEventListener('close', (event) => {
+                setTimeout(connectWebSocket, 1000);
+            });
+        }
+
+        // Initial connection attempt
+        connectWebSocket();
+
+        // Send message function
+        window.sendMessage = function () {
+            const messageInput = document.getElementById('messageInput');
+            const message = messageInput.value.trim();
+
+            if (message !== '') {
+                socket.send(JSON.stringify({ message: message }));
+                messageInput.value = '';
+            }
+        }
+
+        document.getElementById('messageInput').addEventListener("keypress", function(event) {
+            if (event.key === "Enter")
+                document.querySelector('button').click();
+        });
+    };
+</script>
+</body>
+</html>
