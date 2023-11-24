@@ -55,7 +55,7 @@ public:
         wspp_output_buffer.push_back(std::make_tuple(client, data, index));
     }
 
-    static bool WSPPisConnected(SOCKET *client)
+    static bool WSPP_isConnected(SOCKET *client)
     {
         char buffer[1];
         int result = recv(*client, buffer, sizeof(buffer), MSG_PEEK);
@@ -201,7 +201,7 @@ private:
             struct timeval timeout = {3, 0}; // Timeout of 3 seconds
 
             if (select(*client + 1, &read_set, nullptr, nullptr, &timeout) <= 0)
-                if (hz_timer.test(1, 0xF0+index, 3000) && !WSPPisConnected(client)) {
+                if (hz_timer.test(1, 0xF0+index, 3000) && !WSPP_isConnected(client)) {
                     WSPP_onDisconnection(client, index);
                     break;
                 } else continue;

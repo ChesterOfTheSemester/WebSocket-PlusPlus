@@ -21,7 +21,7 @@ WebSocket++ is a C++ library for WebSocket server hosting, providing a simple in
 2. Create an instance of `WSPP` by specifying the port.
 3. Implement callback functions for connection, disconnection, and message handling.
 4. Use `WSPP_emit` to send messages to clients.
-5. Check the connection status with `WSPPisConnected`.
+5. Check the connection status with `WSPP_isConnected`.
 6. Disconnect clients using `WSPP_disconnect`.
 7. Get the total number of connections with `WSPP_totalConnections`.
 
