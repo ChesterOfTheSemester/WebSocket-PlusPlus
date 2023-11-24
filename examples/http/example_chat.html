@@ -10,6 +10,10 @@
             margin: 20px;
         }
 
+        span {
+            white-space: pre-wrap;
+        }
+
         #chatLog {
             width: 100%;
             height: 200px;
@@ -33,6 +37,15 @@
 <div>
     <input type="text" id="messageInput" placeholder="Type your message...">
     <button onclick="sendMessage()">Send</button>
+</div>
+
+<div>
+    <span>
+        Commands:
+        <i>/clear</i> - Clears the chat
+        <i>/connections</i> - Send the number of total current connections
+        <i>/disconnect</i> - Disconnects the sender from the server
+    </span>
 </div>
 
 <script>

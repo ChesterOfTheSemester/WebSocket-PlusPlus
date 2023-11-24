@@ -77,7 +77,7 @@ bool WSPP::WSPP_onMessage(SOCKET *client, std::string data, int index=0)
             }
 
             // Disconnect from client
-            if (data_json->string && !strcmp(data_json->string, "/WSPP_disconnect"))
+            if (data_json->string && !strcmp(data_json->string, "/disconnect"))
                 WSPP_disconnect(client);
         }
 
