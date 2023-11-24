@@ -1,4 +1,4 @@
-# WebSocket++ 0.1
+# WebSocket++ 0.1.0
 
 WebSocket++ is a C++ library for WebSocket server hosting, providing a simple interface for handling WebSocket connections. This library handles handshaking and data framing. It does not use third-party libraries and only the standard socket headers.
 
