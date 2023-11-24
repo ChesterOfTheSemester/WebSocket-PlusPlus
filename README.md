@@ -13,8 +13,8 @@ WebSocket++ is a C++ library for WebSocket server hosting, providing a simple in
 
 # Examples
 - The `/examples` directory contains CPP files for demonstrating various ways to use the WebSocket++ server, along with HTML documents in the `/examples/http` directory for demonstrating client-side connection.
-- `example_ping.cpp` Demonstrates receiving messages from the client as JSON formats and automatically returns the message to the client.
 - `example_chat.cpp` Demonstrates a simple chatbox that handles multiple connections and provides simple chat commands.
+- `example_ping.cpp` Demonstrates receiving messages from the client as JSON formats and automatically returns the message to the client.
 
 ## Usage
 1. Include the necessary headers.
