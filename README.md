@@ -9,7 +9,7 @@ WebSocket++ is a C++ library for WebSocket server hosting, providing a simple in
 - Utilizes threading for efficient communication.
 
 ### Note
-- As of version 0.1, WebSocket++ only works on Windows platforms. Expect this to change in the near future.
+- As of version 0.1, WebSocket++ only works on Windows platforms. Expect this to change in the near future.. 
 
 # Examples
 - The `/examples` directory contains CPP files for demonstrating various ways to use the WebSocket++ server, along with HTML documents in the `/examples/http` directory for demonstrating client-side connectivity.
