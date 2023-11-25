@@ -45,7 +45,7 @@ int main() {
     WSPP server(8080); // Specify the desired port
     // Implement callback functions as needed
 
-    // Main program logic...
+    // Main program logic
 
     return 0;
 }
