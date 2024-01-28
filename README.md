@@ -43,6 +43,7 @@ bool WSPP::WSPP_onMessage(SOCKET *client, std::string data, int index) {
 
 int main() {
     WSPP server(8080); // Specify the desired port
+
     // Implement callback functions as needed
 
     // Main program logic
