@@ -16,6 +16,8 @@ WebSocket++ is a C++ library for WebSocket server hosting, providing a simple in
 - `example_chat.cpp` Demonstrates a simple chatbox that handles multiple connections and provides simple chat commands.
 - `example_ping.cpp` Demonstrates receiving messages from the client as JSON formats and automatically returns the message to the client.
 
+![image](https://github.com/ChesterOfTheSemester/WebSocket-PlusPlus/assets/43809102/6da28a34-2bcc-4f0c-bc44-b47c347f6e9a)
+
 ## Usage
 1. Include the necessary headers.
 2. Create an instance of `WSPP` by specifying the port.
